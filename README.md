@@ -158,22 +158,6 @@ iterations, time, optimizer settings), in the folder layout written by the
 experiment scripts. `src/experiments/analysis/export_logs.py` writes the same
 format for new results.
 
-## Differences from the paper text
-
-The following details are not stated in, or differ from, the text of arXiv v1:
-
-1. The Anderson runs stop at gradient norm 10⁻³ (`min_gradient_norm`), not 10⁻⁶.
-2. The multicomponent runs start from a constant initial guess, not from the Thomas–Fermi approximation.
-3. The TT multicomponent gradient (route II) solves its linear systems with the adaptive relative tolerance min(‖grad‖^θ, κ), κ = 0.01, θ = 1, not 10⁻¹⁰. The single-component and full-format solves stop at relative residual 10⁻¹⁰ (Euclidean norm) or 200 iterations.
-4. Besides the gradient norm, runs stop when the step size falls below 10⁻¹⁰ or after 4 h. All multicomponent TT runs and the harmonic TT runs of rank 5 stopped on the step size; R-GD with the full H¹ gradient (harmonic, N=399, 108 iterations) and the full H¹ run of the Anderson problem at N=6399 (460 iterations) stopped on time.
-5. R-NLCG uses pymanopt's adaptive line search (sufficient decrease 0.5, contraction 0.5, at most 10 backtracking steps); R-GD uses pymanopt's backtracking line search (sufficient decrease 10⁻⁴, initial step optimism 2, at most 25 steps).
-6. The TT multicomponent preconditioner approximates (S + V₀ + I)⁻¹ ⊗ I_p, while the full-format one is (S + V₀)⁻¹.
-7. The multicomponent potential is 2¹²(1 − f₁(x) f₂(y)) plus the trap: the wells (V = 0) occupy one quarter of the 64 × 64 squares, as in the code of Altmann et al., rather than a checkerboard with values {0, 2¹²}.
-8. E* in the relative energy error is the minimum final energy over the R-NLCG runs of the same experiment family (harmonic: exp1 and exp3; lattice; Anderson); for the multicomponent problem it is the minimum over finer-grid runs at N=4095 (`python src/run.py --only ref9`), not "computed on a finer grid and with higher TT ranks" for every problem.
-9. The Thomas–Fermi initial guess is u² = (μ − V)₊/(2β) with μ chosen by bisection for unit mass. The arXiv v1 single-component runs used (μ − V/2)₊/(2β) (the Thomas–Fermi profile for 2β); fresh runs therefore differ slightly in their trajectories and iteration counts.
-10. The S+V preconditioner uses the per-dimension potentials V₀: harmonic xᵢ²; lattice xᵢ² + 40/3; Anderson 0.25 + 0.25/ε²; multicomponent trap(xᵢ) + 2¹¹(1 − fᵢ(xᵢ)).
-11. The Anderson disorder is `jax.random.bernoulli(PRNGKey(1), (40, 40))` (48.9% of the squares at ε⁻²), independent of N. The potential used to build the initial guess differs from the one used in the optimization on about 0.8% of the nodes (square boundaries); this only affects the initial guess.
-
 ## Repository layout
 
 ```

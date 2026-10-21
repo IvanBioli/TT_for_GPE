@@ -37,10 +37,10 @@ import experiments.experiment_setup as experiment_setup
 from experiments.experiment_setup import create_setup_functions, save_results
 
 #### CONFIGURATIONS ####
-# Stopping criteria (paragraph 'Software, parameters, and hardware.'): the paper
-# states the gradient-norm tolerance 1e-6 and the 2000 iterations. In addition,
-# runs stop when the step size of the line search falls below
-# min_step_size=1e-10 or after max_time = 4 h of wall-clock time. These values
+# Stopping criteria (paragraph 'Software, parameters, and hardware.'): runs stop
+# when the gradient norm falls below 1e-6, after 2000 iterations, when the step
+# size of the line search falls below min_step_size=1e-10, or after
+# max_time = 4 h of wall-clock time. These values
 # override those of experiment_setup.DEFAULT_OPTIMIZER_KWARGS (only
 # max_cost_evaluations is taken from there). paperexp_anderson.py overrides
 # min_gradient_norm with 1e-3.

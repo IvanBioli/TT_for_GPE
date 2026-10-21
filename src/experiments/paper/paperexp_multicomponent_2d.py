@@ -16,8 +16,7 @@ otherwise, f2(y) = 1 if i(y) is odd and 0 otherwise:
     V(x, y) = 2^12 (1 - f1(x) f2(y)) + trap(x) + trap(y),
     trap(t) = 10^6 (2 t - 1)^40.
 Hence V - trap = 0 on the squares with even x-index and odd y-index, one
-quarter of the 64 x 64 squares, and 2^12 on the other three quarters (it is
-not a checkerboard, which would have value 0 on half of the squares). The
+quarter of the 64 x 64 squares, and 2^12 on the other three quarters. The
 "S+V" preconditioner uses v_1(x) = trap(x) + 2^11 (1 - f1(x)) and
 v_2(y) = trap(y) + 2^11 (1 - f2(y)).
 

@@ -7,7 +7,7 @@ equal squares, V equal to 1 or eps^{-2} (eps = 0.03) on each square,
 polynomial degree k = 4, N = 1599, 3199 or 6399 interior nodes per dimension,
 TT ranks 20, 40, 50, 60, 80, Thomas--Fermi initial guess.
 
-Values set here that the paper does not state:
+Settings of this script:
 - The disorder is a single fixed draw, jax.random.bernoulli(PRNGKey(1),
   (40, 40)) (seed=1): about 48.9% of the squares take the value eps^{-2}. It
   does not depend on N, so all grids use the same potential.
