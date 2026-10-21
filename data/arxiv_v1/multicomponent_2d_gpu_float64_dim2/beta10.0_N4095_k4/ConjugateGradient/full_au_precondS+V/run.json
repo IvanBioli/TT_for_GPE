@@ -1,0 +1,19 @@
+{
+ "timestamp": "20260623_004804",
+ "optimizer": "ConjugateGradient",
+ "beta_rule": "HestenesStiefel",
+ "line_searcher": "AdaptiveLineSearcher",
+ "stopping_criteria": {
+  "max_time": 14400,
+  "max_iterations": 2000,
+  "min_gradient_norm": 1e-06,
+  "min_step_size": 1e-10,
+  "max_cost_evaluations": 9999999
+ },
+ "stopping_criterion": "Terminated - min grad norm reached after 67 iterations, 6327.53 seconds.",
+ "iterations": 67,
+ "time": 6327.530277490616,
+ "final_cost": 4777.115090648896,
+ "final_gradient_norm": 9.914132245230044e-07,
+ "n_log_entries": 67
+}

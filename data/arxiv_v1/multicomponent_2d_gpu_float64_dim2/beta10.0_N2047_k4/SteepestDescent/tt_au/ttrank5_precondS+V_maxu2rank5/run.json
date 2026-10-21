@@ -1,0 +1,19 @@
+{
+ "timestamp": "20260626_101303",
+ "optimizer": "SteepestDescent",
+ "beta_rule": null,
+ "line_searcher": "BackTrackingLineSearcher",
+ "stopping_criteria": {
+  "max_time": 14400,
+  "max_iterations": 2000,
+  "min_gradient_norm": 1e-06,
+  "min_step_size": 1e-10,
+  "max_cost_evaluations": 9999999
+ },
+ "stopping_criterion": "Terminated - min step_size reached after 100 iterations, 43.34 seconds.",
+ "iterations": 100,
+ "time": 43.34245944023132,
+ "final_cost": 4777.097391005525,
+ "final_gradient_norm": 1.0093687981853691e-05,
+ "n_log_entries": 100
+}

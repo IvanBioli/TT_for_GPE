@@ -1,0 +1,15 @@
+[submodule "pymanopt"]
+	path = src/external/pymanopt
+	url = https://github.com/IvanBioli/pymanopt.git
+	branch = ttgpe-v1
+[submodule "ttpy"]
+	path = src/external/ttpy
+	url = https://github.com/IvanBioli/ttpy.git
+[submodule "ttax"]
+	path = src/external/ttax
+	url = https://github.com/IvanBioli/ttax.git
+	branch = develop
+[submodule "EXP_SUM"]
+	path = src/external/EXP_SUM
+	url = https://gitlab.mis.mpg.de/scicomp/EXP_SUM.git
+	ignore = untracked

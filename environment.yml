@@ -1,0 +1,34 @@
+# Environment used for the paper's experiments (single NVIDIA GPU, CUDA 13).
+# conda env create -f environment.yml && conda activate ttgpe
+# then install the forks from src/external (see README.md, "Installation").
+name: ttgpe
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.13
+  - numpy=2.3.0
+  - scipy=1.16.2
+  - cython
+  - setuptools=78.1.1  # ttpy builds with numpy.distutils, which newer setuptools breaks
+  - gfortran
+  - fenics-dolfinx=0.9.0
+  - fenics-basix=0.9.0
+  - fenics-ffcx=0.9.0
+  - fenics-ufl=2024.2.0
+  - mpich
+  - matplotlib=3.10.6
+  - pandas=2.3.2
+  - jinja2=3.1.6  # needed by pandas.DataFrame.to_latex (tables)
+  - pytest
+  - pip
+  - pip:
+      - jax[cuda13]==0.7.2
+      - tree-math==0.2.1
+      # dependencies of ttax, pinned so that installing ttax keeps jax 0.7.2
+      - flax==0.11.2
+      - optax==0.2.6
+      - orbax-checkpoint==0.11.25
+      - chex==0.1.91
+      - dm-tree==0.1.9
+      - tensorstore==0.1.77
+      - setuptools_scm

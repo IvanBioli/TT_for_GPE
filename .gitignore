@@ -1,0 +1,7 @@
+results*/
+figures/
+*.ipynb
+__pycache__/
+.pytest_cache/
+*.log
+.vscode/

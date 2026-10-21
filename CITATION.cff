@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Riemannian optimization on low-rank tensor train manifolds for the Gross-Pitaevskii equation (code)"
+type: software
+authors:
+  - family-names: Bioli
+    given-names: Ivan
+    orcid: "https://orcid.org/0009-0003-1172-4362"
+  - family-names: Marcati
+    given-names: Carlo
+    orcid: "https://orcid.org/0000-0002-0313-5387"
+  - family-names: Rakhuba
+    given-names: Maxim
+    orcid: "https://orcid.org/0000-0001-7606-7322"
+license: Apache-2.0
+repository-code: "https://github.com/IvanBioli/TT_for_GPE"
+preferred-citation:
+  type: article
+  title: "Riemannian optimization on low-rank tensor train manifolds for the Gross-Pitaevskii equation"
+  authors:
+    - family-names: Bioli
+      given-names: Ivan
+      orcid: "https://orcid.org/0009-0003-1172-4362"
+    - family-names: Marcati
+      given-names: Carlo
+      orcid: "https://orcid.org/0000-0002-0313-5387"
+    - family-names: Rakhuba
+      given-names: Maxim
+      orcid: "https://orcid.org/0000-0001-7606-7322"
+  year: 2026
+  doi: "10.48550/arXiv.2609.37103"
+  url: "https://arxiv.org/abs/2609.37103"
+  identifiers:
+    - type: other
+      value: "arXiv:2609.37103"

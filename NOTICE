@@ -1,0 +1,16 @@
+Riemannian optimization on low-rank tensor train manifolds for the Gross-Pitaevskii equation
+Copyright 2026 Ivan Bioli, Carlo Marcati, Maxim Rakhuba
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party software (not part of this product; referenced as git submodules under
+src/external/ and distributed under their own licenses):
+
+- pymanopt (fork of https://github.com/pymanopt/pymanopt), BSD 3-Clause License.
+- ttpy (fork of the legacy 1.x line of https://github.com/oseledets/ttpy), MIT License.
+- ttax (fork of https://github.com/fasghq/ttax), MIT License.
+- EXP_SUM (https://gitlab.mis.mpg.de/scicomp/EXP_SUM), tables of exponential-sum
+  approximations by W. Hackbusch. EXP_SUM carries no license; it is not
+  redistributed here, only referenced by commit.
+
+See docs/forks.md for the pinned versions and the changes made in the forks.
